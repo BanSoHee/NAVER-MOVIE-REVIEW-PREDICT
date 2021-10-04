@@ -4,6 +4,7 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+# 각 학생들에 대한 딕셔너리 선언
 student_data = {
     1: {"name": "김철수", "score": {"국어": 90, "수학": 65}},
     2: {"name": "김영희", "score": {"국어": 75, "영어": 80, "수학": 75}}

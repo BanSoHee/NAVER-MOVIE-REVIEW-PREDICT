@@ -4,8 +4,9 @@
     <p>이름을 클릭하세요.</p>
     <ul>
         <!-- html for문 -->
-        {% for key, value in template_students | dictsort %}
+        {% for key, value in template_students.items() %}
+            <!-- <a href="/student/{{ key }}">{{ value["name"] }}</a> -->
             <li><a href="/student/{{ key }}">{{ value["name"] }}</a></li>
-        {% endfor%}
+        {% endfor %}
     </ul>
 {% endblock %}
