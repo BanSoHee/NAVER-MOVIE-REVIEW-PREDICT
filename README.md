@@ -1,4 +1,4 @@
-# NAVER-MOVIE-REVIEW-PREDICTCancel changes
+# NAVER-MOVIE-REVIEW-PREDICT
 Perform data analysis on Naver movie reviews and make predictive models based on them
 
 1. 중복 데이터 제거
