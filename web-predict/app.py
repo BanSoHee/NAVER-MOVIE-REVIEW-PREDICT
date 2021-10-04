@@ -34,12 +34,6 @@ def student(id):
 def user(user_name, user_id):
     return 'Hello, {0}({1})!'.format(user_name, user_id)
 
-@app.route("/student/<int:id>")
-def student(id):
-    return render_template("student.html",
-            template_name=student_data[id]["name"],
-            template_score=student_data[id]["score"])
-
 
 if __name__ == '__main__':
     app.run(debug=True)  # 파일의 코드를 수정할 때마다 Flask가 변경된 것을 인식하고 다시 시작
