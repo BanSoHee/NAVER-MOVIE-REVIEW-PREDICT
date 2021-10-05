@@ -56,7 +56,6 @@ def home():
 
 
 @app.route('/register', methods=["GET", "POST"])
-form = RegistrationForm()
 def register():  # 회원가입 URL
     form = RegistrationForm()  # 인스턴스 생성
     if form.validate_on_submit():  # 'POST 요청을 통한 form 제출 O' & 'GET 요청 O' -> 회원가입 templates 반환 및 로그인 결과 전달
