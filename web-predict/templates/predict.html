@@ -1,0 +1,32 @@
+{% with messages = get_flashed_messages() %}
+    {% if messages %}
+        <script>
+            alert("{{ messages[-1] }}")
+        </script>
+    {% endif %}
+{% endwith %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keyword" content="naver, movie, review, predict">
+    <meta name="description" content="naver movie review predict page">
+    <meta name="author" content="반소희">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">  <!-- IE 브라우저에서 가장 최신 버전의 표준 모드 선택 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네이버 영화 리뷰 예측</title>
+</head>
+<body bgcolor="white">
+<form action="/" method="POST">
+    <span style="font-weight: bold; font-size: 1.0em; line-height: 1.5em; color: black; font-family: arial;">
+        <p>movie review predict model</p>
+    </span>
+    <span style="font-weight: bold; font-size: 1.0em; line-height: 1.5em; color: navy; font-family: arial;">
+        <p>영화 리뷰를 입력하세요</p>
+        <p><input type="text" name="review" /></p>
+        <p><input type="submit" value="submit" /></p>
+    </span>
+</form>
+</body>
+</html>

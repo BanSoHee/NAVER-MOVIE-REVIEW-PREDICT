@@ -3,7 +3,7 @@
 # GET 요청 = 어떤 내용을 표시할지 요청
 # POST 요청 = 사용자가 form을 입력 후 양식 제출
 
-from flask import Flask, render_template, url_for, flash, redirect
+from flask import Flask, render_template, url_for, flash, redirect, jsonify, request
 from forms import RegistrationForm  # 회원가입 form 호출
 
 app = Flask(__name__)
@@ -11,9 +11,29 @@ app.config["SECRET_KEY"] = 'd2707fea9778e085491e2dbbc73ff30e'  # 웹 애플리�
 
 
 ########################### web-predict ####################################
-@app.route('/')
-def main():
-    return render_template("base_predict.html")
+# @app.route('/')
+# def main():
+#     return render_template("base_predict.html")
+
+@app.route('/', methods=["GET", "POST"])
+def predict():
+    if request.method == "POST":
+        predict_review = request.form.get("review")
+
+        if predict_review == '':
+            flash("영화 리뷰를 입력하세요.")
+            return render_template("predict.html")
+
+        else:
+            return redirect(url_for('inference'))
+            #return jsonify({"predict":"completed"})
+
+    else:
+        return render_template("predict.html")
+
+@app.route('/inference')
+def inference():
+    return "완료"
 ############################################################################
 
 

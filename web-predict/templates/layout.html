@@ -8,7 +8,7 @@
 <body>
     <main role="main" class="container">
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">  <!-- col 폭 조절 -->
                 <!-- 만약 메시지가 있을 경우 카테고리(success, danger)에 따라 출력 -->
                 {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
