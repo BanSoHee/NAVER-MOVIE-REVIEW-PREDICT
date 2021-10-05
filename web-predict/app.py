@@ -1,5 +1,11 @@
 # $pip install Flask
 
+# 서버를 운영할 .py 파일
+# HTML의 form을 이용해서 여러가지 데이터를 한번에 다음페이지로 넘기기
+# 1. 서버를 운영할 .py 파일 -> app.py
+# 2. 데이터를 넘길 <form>태그가 있는 HTML 파일 -> predict.html
+# 3. <form>태그로 넘어온 데이터를 처리할 HTML 파일 -> inference.html
+
 # GET 요청 = 어떤 내용을 표시할지 요청
 # POST 요청 = 사용자가 form을 입력 후 양식 제출
 
