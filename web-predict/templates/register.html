@@ -1,0 +1,21 @@
+<!-- form이 포함된 템플릿 작성 -->
+
+<form action="/home" method="post">
+
+    {{ form.hidden_tag() }}
+
+    {{ form.username.label }}
+    {{ form.username() }}
+
+    {{ form.email.label }}
+    {{ form.email() }}
+
+    {{ form.password.label }}
+    {{ form.password() }}
+
+    {{ form.confirm_password.label }}
+    {{ form.confirm_password() }}
+
+    {{ form.submit() }}
+
+</form>
