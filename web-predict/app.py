@@ -25,15 +25,19 @@ def predict():
             return render_template("predict.html")
 
         else:
-            return redirect(url_for('inference'))
+            return redirect(url_for('inference'))  # 결과 URL로 redirect
             #return jsonify({"predict":"completed"})
 
     else:
         return render_template("predict.html")
 
 @app.route('/inference')
-def inference():
-    return "완료"
+def inference():  # 리뷰 모델 예측 결과 전달 URL
+    return '''
+    <p>결과</p>
+    <p>예측 모델 결과 넣기</p>
+    <a href="/">메인화면 돌아가기</a>
+    '''
 ############################################################################
 
 
